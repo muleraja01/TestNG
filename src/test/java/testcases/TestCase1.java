@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class TestCase1 {
+public class TestCase1 extends BaseTest{
 
 	@BeforeTest
 	public void creatingDBConn() {
@@ -24,12 +24,12 @@ public class TestCase1 {
 	public void closeBrowser() {
 		System.out.println("Closing the browser");
 	}
-	@Test(priority = 1)
+	@Test(priority = 1,groups="functional")
 	public void doUserReg() {
 		System.out.println("Executing User Reg Test");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups="functional")
 	public void doLogin() {
 		System.out.println("Executing Login Test");
 	}

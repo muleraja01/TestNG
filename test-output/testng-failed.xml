@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNG Listeners]">
+  <listeners>
+    <listener class-name="TestNGListenerOnFailure.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Login Test(failed)">
     <classes>
-      <class name="testcases.TestCase2">
+      <class name="TestNGListenerOnFailure.LoginTest">
         <methods>
-          <include name="validateTitle"/>
+          <include name="composeEmail"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="doLogin"/>
         </methods>
-      </class> <!-- testcases.TestCase2 -->
+      </class> <!-- TestNGListenerOnFailure.LoginTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Login Test(failed) -->
+</suite> <!-- Failed suite [TestNG Listeners] -->
