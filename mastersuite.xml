@@ -3,6 +3,7 @@
 <suite name="Master Suite">
 <listeners>
 <listener class-name="extentlisteners.ExtentListeners"></listener>
+<listener class-name="RetryListeners.RetryListner"></listener>
 </listeners>
 	<suite-files>
 		<suite-file path="./testng.xml"></suite-file>
